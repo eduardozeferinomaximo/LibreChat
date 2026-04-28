@@ -5,11 +5,9 @@ cache: true
 # Configurações do Google Gemini
 endpoints:
   google:
-    # A linha abaixo força o uso da API estável e mata o erro 404
-    version: "v1"
     models:
       default: ["gemini-1.5-flash"]
-      fetch: false # Deixe false para ele não tentar buscar rotas beta na internet
+      fetch: false # Importante: mude para false
     modelDisplayLabel: "Mentor Gemini"
 
 # Configurações de busca em arquivos (RAG)
