@@ -9,8 +9,6 @@ endpoints:
     models:
       default: ["gemini-1.5-flash"]
       fetch: true
-    # Isso ativa a aba de Assistants que estava sumida
-    assistants: true
 
 # Configurações de busca em arquivos (RAG)
 # Isso permite que a IA consulte seus PDFs sem mostrá-los
