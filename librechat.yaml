@@ -5,6 +5,7 @@ cache: true
 
 endpoints:
   google:
+    version: "v1"
     models:
       default: ["gemini-1.5-flash"]
       fetch: true
