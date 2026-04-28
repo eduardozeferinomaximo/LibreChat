@@ -1,24 +1,26 @@
-# Arquivo: librechat.yaml
-version: "1.1.0"
+version: "1.1.5"
 
 cache: true
 
+# Configurações do Google Gemini
 endpoints:
   google:
+    # A linha abaixo força o uso da API estável e mata o erro 404
+    version: "v1"
     models:
       default: ["gemini-1.5-flash"]
-      fetch: true
+      fetch: false # Deixe false para ele não tentar buscar rotas beta na internet
     modelDisplayLabel: "Mentor Gemini"
 
 # Configurações de busca em arquivos (RAG)
-# Isso permite que a IA consulte seus PDFs sem mostrá-los
-rag:
-  enabled: true
-  embeddedModels: ["gemini-1.5-flash"]
+fileConfig:
+  endpoints:
+    google:
+      disabled: false
+      fileLimit: 20
+      fileSizeLimit: 512
 
-# Interface e Segurança
+# Interface
 interface:
   privacyPolicy:
     externalUrl: 'https://sua-ong.org/privacidade'
-  # Isso impede que usuários comuns apaguem seus arquivos de configuração
-  disableUserFiles: false
