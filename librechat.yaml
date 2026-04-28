@@ -5,11 +5,10 @@ cache: true
 
 endpoints:
   google:
-    version: "v1"
     models:
       default: ["gemini-1.5-flash"]
-      fetch: false
-    modelDisplayLabel: "Google Gemini"
+      fetch: true
+    modelDisplayLabel: "Mentor Gemini"
 
 # Configurações de busca em arquivos (RAG)
 # Isso permite que a IA consulte seus PDFs sem mostrá-los
