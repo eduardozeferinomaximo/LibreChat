@@ -1,0 +1,25 @@
+# Arquivo: librechat.yaml
+version: "1.1.0"
+
+cache: true
+
+endpoints:
+  google:
+    models:
+      default: ["gemini-1.5-flash"]
+      fetch: true
+    # Isso ativa a aba de Assistants que estava sumida
+    assistants: true
+
+# Configurações de busca em arquivos (RAG)
+# Isso permite que a IA consulte seus PDFs sem mostrá-los
+rag:
+  enabled: true
+  embeddedModels: ["gemini-1.5-flash"]
+
+# Interface e Segurança
+interface:
+  privacyPolicy:
+    externalUrl: 'https://sua-ong.org/privacidade'
+  # Isso impede que usuários comuns apaguem seus arquivos de configuração
+  disableUserFiles: false
