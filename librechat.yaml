@@ -6,7 +6,7 @@ cache: true
 endpoints:
   google:
     models:
-      default: ["gemini-pro"]
+      default: ["gemini-1.5-flash"]
       fetch: false # Importante: mude para false
     modelDisplayLabel: "Mentor Gemini"
 
